@@ -1,0 +1,182 @@
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    width: 100%;
+}
+
+
+.images-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+
+    .image-container {
+        width: 30vw; /* Set a fixed width */
+        height: 30vw; /* Set the same height to make it a square */
+        overflow: hidden; /* Ensure that the image is cut if it overflows the container */
+        border-radius: 8px; /* Optional: to round the corners of the image container */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+            object-position: center; /* Focuses on the center of the image */
+        }
+    }
+
+    .arrow {
+        font-size: 64px;
+        color: #333;
+    }
+
+}
+
+.info-section {
+    background-color: var(--light-green); /* Green background */
+    padding: 40px 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    color: #333;
+
+    .text-columns {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        gap: 40px;
+        margin-bottom: 40px;
+
+        .text-box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+
+            h2 {
+                font-size: 24px;
+                color: var(--text-color-black);
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: var(--text-color-black);
+            }
+
+        }
+
+    }
+
+    .logos-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap; /* Allow wrapping to a new line */
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px 0;
+        gap: 20px;
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+}
+
+.contact-section {
+    text-align: center;
+    padding: 128px 32px 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--light-green);
+
+    p {
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 40px; /* Add spacing between text and links */
+    }
+
+    .links-row {
+        display: flex;
+        justify-content: center;
+        gap: 40px; /* Space between the links */
+    }
+
+    .link {
+        color: var(--light-green);
+        font-size: 24px;
+    }
+
+    .link:hover {
+        text-decoration: underline; /* Underline on hover */
+        font-weight: bold;
+    }
+
+    .link-bold {
+        text-decoration: underline; /* Always underlined */
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .call-to-action {
+        padding: 60px 0;
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .images-section {
+        padding: 10px;
+        gap: 10px;
+
+        .image-container {
+            width: 42vw;
+            height: 42vw;
+
+
+        }
+
+        .arrow {
+            font-size: 32px;
+        }
+
+    }
+
+    .info-section {
+
+        .text-columns {
+            flex-direction: column;
+            gap: 0;
+            margin-bottom: 20px;
+
+            .text-box {
+                padding: 10px;
+
+            }
+
+        }
+
+        .logos-section {
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

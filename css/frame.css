@@ -1,0 +1,250 @@
+/* Define color variables */
+:root {
+    --light-green: #83c652;
+    --dark-green: #316d31;
+    --text-color-black: #1e1e1e;
+    --text-color-grey: #777;
+    --grey-active: #d9d9d9;
+    --white: #fff;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: var(--white);
+    color: var(--text-color-black);
+
+}
+
+body * {
+    transition: all 0.3s ease;
+}
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+
+    .logo {
+
+        gap: 16px;
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center;
+
+        img {
+            width: 40px;
+            height: 45px;
+        }
+
+        .navigation-pill {
+            background-color: var(--light-green);
+            color: var(--white);
+        }
+
+    }
+
+    .navigation-pill {
+        padding: 8px 16px;
+        background-color: var(--white);
+        border-radius: 4px;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+    }
+
+    .navigation-pill-list {
+        display: flex;
+        gap: 16px;
+        flex-grow: 2;
+
+
+        .navigation-pill:hover {
+            background-color: var(--grey-active);
+        }
+    }
+}
+
+.space {
+    flex-grow: 2;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-color-grey {
+    color: var(--text-color-grey);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--dark-green);
+    color: var(--white);
+    display: flex;
+    align-items: start;
+    padding: 32px 32px 64px;
+
+    .links {
+        display: flex;
+        flex-direction: row;
+
+        .link-liste {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 0 64px;
+
+            a {
+
+                text-decoration: none; /* Removes the underline */
+                color: inherit;
+            }
+
+            p {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .logo {
+
+            gap: 16px;
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;
+
+        }
+
+        img {
+            width: 40px;
+            height: 45px;
+        }
+
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: 500px;
+    background: url('/media/wp_cat.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Slight dark overlay */
+    }
+
+    .centered-box {
+        position: relative;
+        background-color: var(--light-green); /* Green background */
+        padding: 20px;
+        text-align: center;
+        color: white;
+        border-radius: 4px;
+    }
+
+    .centered-box h1 {
+        font-size: 32px;
+        line-height: 1.4;
+    }
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 80px 0;
+
+    h2 {
+        color: var(--light-green);
+        font-size: 32px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 4px 16px;
+
+        .navigation-pill-list {
+            gap: 8px;
+
+            .navigation-pill {
+                text-align: center;
+                padding: 2px 8px;
+            }
+        }
+
+        .logo {
+            align-items: start;
+        }
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 16px;
+
+        .links {
+
+
+            width: 100%;
+            justify-content: space-between;
+
+            .link-liste {
+
+                padding: 0 16px;
+
+
+            }
+
+        }
+
+    }
+
+    .hero-section {
+
+        height: 250px;
+
+        .centered-box h1 {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
+}
