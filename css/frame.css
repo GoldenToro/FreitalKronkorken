@@ -155,7 +155,7 @@ body * {
 .hero-section {
     position: relative;
     height: 500px;
-    background: url('/media/wp_cat.jpeg') no-repeat center center/cover;
+    background: url('media/wp_cat.jpeg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,5 +1,5 @@
 // Define your image folder path and image names
-const imageFolder = "/media/fotos/";
+const imageFolder = "media/fotos/";
 const imageFiles = [
     "IMG-20240730-WA0002.jpg",
     "IMG-20240731-WA0003.jpg",
